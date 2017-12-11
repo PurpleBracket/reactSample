@@ -1,0 +1,12 @@
+[ignore]
+.*/node_modules/.*
+.*/bundle/.*
+.*/dist/.*
+
+[include]
+
+[libs]
+
+[lints]
+
+[options]

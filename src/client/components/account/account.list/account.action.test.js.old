@@ -1,0 +1,36 @@
+/* global describe test expect jest */
+import { createAccount } from './account.action'
+import nock from 'nock'
+import RestClient from '../../../packages/express-plus/src/data/restclient'
+
+// TODO: Make this global
+RestClient.__setTestServer('127.0.0.1')
+
+describe('Account Action', () => {
+  test('returns', (done) => {
+    nock('http://127.0.0.1')
+      .post('/api/account')
+      .reply(200, {
+        status: 'SUCCESS'
+      })
+
+    let getCompanyId = jest.fn(() => {
+      return 44
+    })
+
+    global.window = {
+      globalState: {
+        getCompanyId
+      }
+    }
+    createAccount({
+      values: {
+        companyId: null
+      }
+    }, (res) => {
+      expect(res.body.status).toEqual('SUCCESS')
+      expect(getCompanyId).toBeCalled()
+      done()
+    })
+  })
+})

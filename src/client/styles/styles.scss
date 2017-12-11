@@ -1,0 +1,86 @@
+//@import './base/_settings.scss';
+//@import './base/_base.scss';
+//@import '../components/header/_header.scss';
+//@import '../routes/_main.scss';
+//@import '../components/auth/_auth.scss';
+@import './base/_bulma_color_variables.scss';
+@import "mixins/mixins";
+@import "../../../node_modules/bulma/bulma.sass";
+@import '../../../node_modules/bulma-extensions/bulma-tooltip/tooltip';
+
+// Breakpoints
+$breakpoints: (
+  phoneSm: 375px,
+  phoneLg: 414px,
+  tabletSm: 600px,
+  tabletLg: 1023px,
+  desktopSm: 1080px,
+  desktopMd: 1440px,
+  desktopLg: 1920px
+);
+
+html, body, #root{
+  height: 100%;
+  min-height: 100vh;
+  max-width: 100vw;
+  background: darken($grey-bg, 0%);
+}
+
+body{
+  box-sizing: border-box;
+  max-width: 100vw;
+}
+
+#root, .container, .columns{
+  max-width: 100vw;
+
+  @include breakpoint(tabletSm, 'max') {
+    margin: 0;
+  }
+  //overflow: hidden;
+}
+
+.container.nav-padding {
+  padding: 100px 0;
+}
+
+.container{
+  transition: $transition-speed--1;
+}
+
+.navbar.is-fixed-top{
+  max-width: 100vw;
+}
+
+.button{
+  transition: $transition-speed--1;
+  border-radius: 2px;
+  box-shadow: $button-shadow;
+
+  &:focus {outline:0;}
+
+  &:hover{
+    box-shadow: $button-hover-shadow;
+  }
+}
+button:focus {outline:0;}
+
+.icon i {
+  transition: $transition-speed--1;
+}
+
+.tooltip:before, .tooltip:after{
+  //box-shadow: $button-hover-shadow;
+  border-color: rgba(255, 255, 255, 1);
+}
+
+.tooltip:before{
+  z-index: 201;
+}
+
+.tooltip:after{
+  background-color: rgba(255, 255, 255, 1);
+  opacity: 1;
+  box-shadow: 1px 6px 6px rgba($dark-purple, 0.35);
+  z-index: 200;
+}

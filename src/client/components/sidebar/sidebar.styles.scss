@@ -1,0 +1,81 @@
+@import "../../styles/styles";
+
+.sidebar{
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-height: 100vh;
+  width: 60px;
+  padding: 0;
+  z-index: 100;
+  //background-image: linear-gradient(225deg, $dark-purple, darken($light-grey-blue, 20%));
+  background: $dark-purple;
+  //box-shadow: 2px 0px 6px rgba($grey-darker, 0.25);
+  opacity: 0.875;
+  transition: $transition-speed--1;
+  //overflow: hidden;
+
+
+  .navbar-item {
+    height: 60px;
+    line-height: 38px;
+    padding: 11px 6px;
+    opacity: 0.85;
+    transition: $transition-speed--1;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+
+  &.expanded {
+    width: 200px;
+    max-width: 30vw;
+
+    .navbar-item {
+      height: 60px;
+      line-height: 38px;
+      padding: 11px 6px;
+    }
+
+    .toggle-icon, .toggleIcon{
+      text-align: right;
+
+      padding-right: 10px;
+    }
+  }
+
+  @include breakpoint(tabletSm, 'max') {
+    width: 0;
+    left: -100%;
+  }
+}
+
+.toggle-icon, .toggle-icon.tooltip, .toggleIcon, .toggleIcon.tooltip {
+  width: 12px;
+  height: 100vh;
+  color: white;
+  text-align: center;
+  opacity: 0.75;
+  transition: $transition-speed--1;
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  p.is-size-7{
+    @include absolute-center;
+
+    span i{
+      font-size: 0.6rem !important;
+    }
+  }
+
+  &:hover{
+    background-color: rgba($grey-bg, 0.05);
+    opacity: 1;
+  }
+}

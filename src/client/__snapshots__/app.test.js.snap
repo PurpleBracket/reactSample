@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should match snapshot 1`] = `
+<div>
+  <div
+    className="landingWrapper"
+    style={undefined}
+  >
+    <nav
+      aria-label="main navigation"
+      className="navbar is-dark topbarHome is-fixed-top is-transparent"
+      role="navigation"
+      style={undefined}
+    >
+      <div
+        className="navbar-start"
+      >
+        <div
+          className="navbar-brand"
+        >
+          <a
+            className="navbar-item nav-logo"
+            href="/"
+          >
+            <img
+              alt="Treasure"
+              src={Object {}}
+            />
+          </a>
+          <button
+            className="button navbar-burger"
+            onClick={[Function]}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
+      </div>
+      <div
+        className="navbar-end"
+      >
+        <div
+          className="navbar-menu"
+        >
+          <div
+            className="nav-link navbar-item nav-link-transparent"
+            style={undefined}
+          >
+            <p
+              className="control"
+            >
+              <a
+                className="navbar-item"
+                href="/signup"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                
+                <button
+                  className="button is-primary is-inverted is-outlined"
+                  onClick={undefined}
+                  type={undefined}
+                >
+                  Create Account
+                </button>
+              </a>
+            </p>
+          </div>
+          <div
+            className="nav-link navbar-item nav-link-transparent"
+            style={undefined}
+          >
+            <p
+              className="control"
+            >
+              <a
+                className="navbar-item"
+                href="/signin"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                
+                <button
+                  className="button is-primary is-inverted is-outlined"
+                  onClick={undefined}
+                  type={undefined}
+                >
+                  Sign In
+                </button>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div
+      className="container nav-padding"
+    >
+      <div>
+        Where are you going?!
+      </div>
+    </div>
+    <footer
+      className="footer"
+    >
+      <div
+        className="container"
+      >
+        <div
+          className="level"
+        >
+          <div
+            className="level-left"
+          >
+            <div
+              className="level-item"
+            >
+              <p
+                className="subtitle is-5"
+              >
+                <strong>
+                  Treasure © 2017 · All rights reserved.
+                </strong>
+              </p>
+            </div>
+          </div>
+          <div
+            className="level-right"
+          >
+            <div
+              className="level-item"
+            >
+              <p
+                className="subtitle is-5"
+              >
+                <strong>
+                  founders@treasure.tech
+                </strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+`;

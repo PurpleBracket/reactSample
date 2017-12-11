@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home Snapshot 1`] = `
+<div
+  className="homeContainer"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="columns"
+    >
+      <div
+        className="column is-three-fifths is-offset-one-fifth"
+      >
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Headline
+          color="white"
+          size="1"
+          spaced={true}
+        >
+          Welcome to Treasure Landing Page!
+        </Headline>
+        <Subhead
+          size="3"
+        >
+          Start growing with Treasure
+        </Subhead>
+        <Button
+          color="white"
+          style="outline"
+        >
+          Learn More
+        </Button>
+      </div>
+    </div>
+  </div>
+</div>
+`;

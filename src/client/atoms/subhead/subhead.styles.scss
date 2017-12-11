@@ -1,0 +1,32 @@
+@import "../../styles/styles";
+
+.subtitle.subhead, .subhead {
+  font-family: $family-body;
+  line-height: 1.5;
+  font-weight: 300;
+  letter-spacing: 0.01rem;
+  margin-bottom: 10px;
+  display: block;
+  //color: rgba($charcoal-grey, 0.8);
+
+  b{
+    font-weight: 900;
+  }
+
+  &.is-bold{
+    font-weight: 900;
+    letter-spacing: 0.075rem;
+
+    b{
+      font-weight: 300;
+    }
+  }
+
+  .is-centered {
+    text-align: center;
+  }
+
+  .subtitle:not(.is-spaced) + .title {
+    margin-top: 0 !important;
+  }
+}

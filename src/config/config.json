@@ -1,0 +1,9 @@
+{
+  "secret": "CONFIG",
+
+  "plaid": {
+    "publickey": "e4505299424a97df527f268a5f76a4",
+    "secret": "ada3d63b4836607dee64c9603bf3ee",
+    "clientid": "57e6f7d7062e8c1d58ff9320"
+  }
+}

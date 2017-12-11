@@ -1,0 +1,14 @@
+@import "../../styles/styles";
+
+.homeContainer{
+  //background-color: $grey-darker;
+  //padding-top: 102px;
+
+  >* {
+    color: white;
+  }
+
+  label {
+    color: white;
+  }
+}

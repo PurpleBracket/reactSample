@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Template should match App 1`] = `<Connect(withRouter(AppTemplate)) />`;
+
+exports[`Landing Template should match Landng page 1`] = `
+<div
+  className="landingWrapper"
+>
+  <TopbarHome />
+  <div
+    className="container nav-padding"
+  >
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/style"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/signin"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/signup"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/signout"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/password-reset"
+      />
+      <Route
+        component={[Function]}
+      />
+    </Switch>
+  </div>
+  <Component />
+</div>
+`;

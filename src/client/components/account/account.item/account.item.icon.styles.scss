@@ -1,0 +1,15 @@
+@import "../../../styles/styles";
+
+.icon.account-item--icon, .accountItemIcon{
+  width: 12vh;
+  height: 12vh;
+  background: rgba($primary, 0.8);
+  float: left;
+  margin-right: 40px;
+  color: $grey-bg;
+
+
+  span i {
+    color: $grey-bg;
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "secret": "TEST",
+
+  "config-test": {
+    "port": 1234
+  },
+
+  "mongo": {
+    "server": "ds155325.mlab.com:55325",
+    "port": "55325",
+    "database": "treasure-test",
+    "user": "test",
+    "password": "test",
+    "uri": "mongodb://test:test@ds155325.mlab.com:55325/treasure-test"
+  }
+}

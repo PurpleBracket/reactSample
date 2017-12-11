@@ -1,0 +1,21 @@
+{
+  "secret": "PRODUCTION",
+
+  "treasure-api": {
+    "port": 8080,
+    "host": "www.treasure.tech",
+    "url": "www.treasure.tech"
+  },
+
+  "mongo": {
+    "server": "ds129946.mlab.com:29946",
+    "port": "29946",
+    "database": "treasure-production",
+    "uri": "mongodb://production:production@ds129946.mlab.com:29946/treasure-production"
+  },
+
+  "plaid": {
+    "env": "development",
+    "url": "https://development.plaid.com"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "cacheDirectory": "./cache",
+  "roots": [
+    "src"
+  ],
+  "testEnvironment": "node",
+  "verbose": false,
+  "silent": true,
+  "bail": false,
+  "testResultsProcessor": "jest-junit",
+  "collectCoverage": false,
+  "moduleNameMapper": {
+    "\\.(scss|css)$": "<rootDir>/node_modules/jest-css-modules",
+    "\\.(svg)$": "<rootDir>/src/tests/assetsTransformer.js"
+  },
+  "setupFiles": [
+    "raf/polyfill",
+    "<rootDir>/src/tests/setupTests.js"
+  ],
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ],
+  "transformIgnorePatterns": [
+    "node_modules"
+  ],
+  "coverageDirectory": "<rootDir>/coverage",
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx}",
+    "!<rootDir>/node_modules/",
+    "!**/node_modules/",
+    "!<rootDir>/dist/"
+  ],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/src/packages/express-enrouten",
+    "<rootDir>/src/tests/setupTests.js",
+    "<rootDir>/src/tests/assetsTransformer.js"
+  ],
+  "testPathIgnorePatterns": [
+    "/node_modules/",
+    "/dist/",
+    "/bundle/"
+  ],
+  "modulePathIgnorePatterns": [
+    "/node_modules/",
+    "/dist/",
+    "/bundle/",
+    "<rootDir>/bundle/*"
+  ]
+}

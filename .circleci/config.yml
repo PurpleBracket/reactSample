@@ -1,0 +1,172 @@
+version: 2
+
+jobs:
+  build-master:
+    docker:
+      - image: node:8.4.0
+
+    working_directory: ~/treasure-api
+
+    steps:
+      - checkout
+
+      - restore_cache:
+          keys:
+            - v1.5-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1.5-dependencies-
+
+      - run:
+          name: "Install Project Dependencies"
+          command: npm install
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1.5-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
+
+      - run:
+          name: "Build Master"
+          command: npm run build-dev
+
+      - run:
+          name: "JavaScript Test Suite"
+          command: npm run cover
+          environment:
+            JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
+
+      - run:
+          name: "Generate Coverage Report"
+          command: ./node_modules/nyc/bin/nyc.js report --reporter=html
+
+      - run:
+          name: "Install System Dependencies"
+          command: |
+            apt-get -y update
+            apt-get -y install python-setuptools python-dev build-essential
+            easy_install --upgrade six
+            easy_install pip
+            pip install awsebcli
+            apt-get -y install zip unzip
+
+      - run:
+          name: "Bundle"
+          command: npm run bundle
+
+#      - store_artifacts:
+#          path: ./test-results.xml
+#          #prefix: tests
+#          destination: $CIRCLE_TEST_REPORTS/junit/test-results.xml
+
+      - store_artifacts:
+          path: ./coverage
+          prefix: coverage
+
+      - store_artifacts:
+          path: ./bundle.zip
+
+      - store_test_results:
+          path: .nyc_output
+
+      - store_test_results:
+          path: reports/junit
+
+      - store_artifacts:
+          path: reports/junit
+
+      - run:
+          name: "Create Elastic Beanstalk Credentials"
+          command: bash ./scripts/create_eb_credentials.sh
+
+      - run:
+          name: Deploy if tests pass and branch is Staging
+          command: npm run deploy-master
+
+  build-production:
+     docker:
+       - image: node:8.4.0
+
+     working_directory: ~/treasure-api
+
+     steps:
+       - checkout
+
+       - restore_cache:
+           keys:
+             - v1.5-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
+             # fallback to using the latest cache if no exact match is found
+             - v1.5-dependencies-
+
+       - run:
+           name: "Install Project Dependencies"
+           command: npm install
+
+       - save_cache:
+           paths:
+             - node_modules
+           key: v1.5-dependencies-{{ .Branch }}-{{ checksum "package.json" }}
+
+       - run:
+           name: "Build Production"
+           command: npm run build-prod
+
+       - run:
+           name: "JavaScript Test Suite"
+           command: npm run cover
+           environment:
+             JEST_JUNIT_OUTPUT: reports/junit/js-test-results.xml
+
+       - run:
+           name: "Generate Coverage Report"
+           command: ./node_modules/nyc/bin/nyc.js report --reporter=html
+
+       - run:
+           name: "Install System Dependencies"
+           command: |
+             apt-get -y update
+             apt-get -y install python-setuptools python-dev build-essential
+             easy_install --upgrade six
+             easy_install pip
+             pip install awsebcli
+             apt-get -y install zip unzip
+
+       - run:
+           name: "Bundle"
+           command: npm run bundle
+
+       - store_artifacts:
+           path: ./coverage
+           prefix: coverage
+
+       - store_artifacts:
+           path: ./bundle.zip
+
+       - store_test_results:
+           path: .nyc_output
+
+       - store_test_results:
+           path: reports/junit
+
+       - store_artifacts:
+           path: reports/junit
+
+       - run:
+           name: "Create Elastic Beanstalk Credentials"
+           command: bash ./scripts/create_eb_credentials.sh
+
+       - run:
+           name: Deploy if tests pass and branch is Staging
+           command: npm run deploy-production
+
+workflows:
+  version: 2
+  build-test-deploy:
+    jobs:
+      - build-master:
+          filters:
+            branches:
+              only: master
+      - build-production:
+          filters:
+            branches:
+              only: production

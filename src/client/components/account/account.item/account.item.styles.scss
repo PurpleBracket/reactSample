@@ -1,0 +1,23 @@
+@import "../../../styles/styles";
+
+.card.panel.account-item, .accountItems {
+  margin-bottom: 20px;
+
+  button{
+    margin: 0;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 0;
+    padding-bottom: 0;
+    transition: $transition-speed--1;
+    background-image: linear-gradient(135deg, $primary, $light-grey-blue);
+    border: 0 solid transparent;
+    opacity: 0.75;
+    @include absolute-center;
+
+    &:hover{
+      opacity: 1;
+    }
+  }
+}

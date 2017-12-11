@@ -1,0 +1,116 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register should match snapshot 1`] = `
+<div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column is-one-third is-offset-one-third"
+      style={
+        Object {
+          "minHeight": "100vh",
+        }
+      }
+    >
+      <Panel
+        className="signupForm"
+        noBorder={true}
+        noShadow={true}
+        transparentBG={true}
+      >
+        <Subhead
+          size="4"
+        >
+          Start growing with Treasure
+        </Subhead>
+        <form
+          className="card-content"
+          onSubmit={[Function]}
+        >
+          <Input
+            hasIconLeft={true}
+            hasIconRight={true}
+            icon="user"
+            name="name"
+            onChange={[Function]}
+            placeholder="Name"
+            required={true}
+            type="text"
+          />
+          <Input
+            hasIconLeft={true}
+            hasIconRight={true}
+            icon="envelope"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email Address"
+            required={true}
+            type="email"
+          />
+          <Input
+            hasIconLeft={true}
+            hasIconRight={true}
+            icon="unlock-alt"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            required={true}
+            type="password"
+          />
+          <Input
+            name="policy"
+            onChange={[Function]}
+            required={true}
+            type="checkbox"
+          >
+            I agree to 
+            <LinkAtom
+              href="#"
+            >
+              Treasure’s Terms of Use
+            </LinkAtom>
+             & consent to 
+            <LinkAtom
+              href="#"
+            >
+              Treasure’s Privacy Policy
+            </LinkAtom>
+          </Input>
+          <div
+            className="field buttons is-centered"
+          >
+            <Button
+              color="white"
+              style=""
+              type="submit"
+            >
+              Sign Up
+            </Button>
+          </div>
+        </form>
+        <footer
+          className="card-footer"
+        >
+          <p
+            className="card-footer-item"
+          >
+            <span>
+              <LinkAtom
+                href="/signin"
+              >
+                Already have an account? 
+                <br />
+                 
+                <b>
+                  Sign In
+                </b>
+              </LinkAtom>
+            </span>
+          </p>
+        </footer>
+      </Panel>
+    </div>
+  </div>
+</div>
+`;

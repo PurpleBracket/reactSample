@@ -1,0 +1,21 @@
+{
+  "secret": "LOCAL",
+
+  "treasure-api": {
+    "port": 3000,
+    "host": "localhost",
+    "url": "localhost:3000"
+  },
+
+  "mongo": {
+    "server": "localhost:27017",
+    "port": "27017",
+    "database": "treasure-local",
+    "uri": "mongodb://localhost:27017/treasure-local"
+  },
+
+  "plaid": {
+    "env": "sandbox",
+    "url": "https://sandbox.plaid.com"
+  }
+}

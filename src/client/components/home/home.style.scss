@@ -1,0 +1,15 @@
+@import "../../styles/styles";
+
+.homeContainer{
+  background-color: transparent !important;
+  padding-top: 102px;
+  min-height: 100vh;
+
+  > div * {
+    color: white;
+  }
+
+  label {
+    color: white;
+  }
+}

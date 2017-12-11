@@ -1,0 +1,6 @@
+{
+  "favicon": {
+    "enabled": false,
+    "path": "../public"
+  }
+}

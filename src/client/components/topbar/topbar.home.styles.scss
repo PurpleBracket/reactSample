@@ -1,0 +1,32 @@
+@import "../../styles/styles";
+
+nav.navbar.topbarHome {
+  background-color: transparent !important;
+  height: 70px;
+  line-height: 70px;
+  z-index: 1000;
+
+  .navbar-start, .navbar-end {
+    height: 70px;
+    padding: 6px;
+  }
+
+  .navbar-end{
+    padding: 16px 6px;
+  }
+
+
+  .navbar-menu{
+    transition: $transition-speed--1;
+    z-index: 1000;
+    @include breakpoint(tabletLg, 'max') {
+      background-color: transparent !important;
+    }
+  }
+
+  .navbar-burger{
+    background-color: transparent !important;
+    color: #FFFFFF !important;
+    border: 0px solid transparent;
+  }
+}

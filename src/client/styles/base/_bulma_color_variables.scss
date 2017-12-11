@@ -1,0 +1,105 @@
+/*
+// 1. Import the initial variables
+*/
+@import "../../../../node_modules/bulma/sass/utilities/initial-variables.sass";
+@import "../../../../node_modules/bulma/sass/utilities/functions.sass";
+
+/*
+// 2. Set your own initial variables
+// Update blue
+*/
+$blue: #72d0eb;
+
+/* Add pink and its invert */
+$pale-purple: #a389d4;
+$light-grey-blue: #899fd4;
+$grey-bg: #fafcfd;
+$light-grey: #899fd4;
+$sapphire: #3023ae;
+$charcoal-grey: #393c40;
+$grey-darker: rgb(13,9,34);
+$grey-light: $grey-bg;
+$dusty-purple: #705f83;
+$dark-purple: #231b4b;
+
+
+/* Add a serif family*/
+$family-title: 'Roboto', sans-serif;
+$family-body: 'Open Sans', sans-serif;
+
+/* 3. Set the derived variables
+ Use the new pink as the primary color*/
+$primary: $dusty-purple;
+/*  // Use the new serif family*/
+$family-primary: $family-title;
+
+$link: $charcoal-grey;
+
+$transition-speed--1: all 0.35s ease-in-out;
+$nav-box-shadow: 0px 2px 5px rgba($grey-darker, 0.1);
+
+
+$button-shadow: 0 1px 4px rgba($black, 0.05);
+$button-hover-shadow: 0 3px 6px rgba($black, 0.15);
+// nav
+
+//$navbar-background-color	$white
+//$navbar-height	3.25rem
+//$navbar-item-color:	$grey-darker;
+//$navbar-item-hover-color: $black;
+//$navbar-item-hover-background-color: transparent;
+//$navbar-item-active-color:	$primary;
+//$navbar-item-active-background-color	transparent
+//$navbar-item-img-max-height	1.75rem
+//$navbar-tab-hover-background-color	transparent
+//$navbar-tab-hover-border-bottom-color	$link
+//$navbar-tab-active-color	$link
+//$navbar-tab-active-background-color	transparent
+//$navbar-tab-active-border-bottom-color	$link
+//$navbar-tab-active-border-bottom-style	solid
+//$navbar-tab-active-border-bottom-width	3px
+//$navbar-dropdown-background-color	$white
+$navbar-dropdown-border-top: 1px solid $grey-darker;
+$navbar-dropdown-offset: -4px;
+//$navbar-dropdown-arrow	$link
+$navbar-dropdown-radius: 0;
+//$navbar-dropdown-z	20
+$navbar-dropdown-boxed-radius: 0;
+//$navbar-dropdown-boxed-shadow	0 8px 8px rgba($black, 0.1), 0 0 0 1px rgba($black, 0.1)
+$navbar-dropdown-item-hover-color:	$grey-darker;
+$navbar-dropdown-item-hover-background-color: transparent;
+$navbar-dropdown-item-active-color:	$link;
+$navbar-dropdown-item-active-background-color: transparent;
+//$navbar-divider-background-color	$border
+$dropdown-content-background-color:	$grey-bg;
+//$dropdown-content-arrow	$link
+$dropdown-content-offset: 0;
+$dropdown-content-radius: 0;
+$dropdown-content-shadow:	0 3px 6px rgba($black, 0.1);
+//$dropdown-content-z: 9;
+//$dropdown-item-color	$grey-dark
+//$dropdown-item-hover-color	$black
+//$dropdown-item-hover-background-color	$background
+//$dropdown-item-active-color	$link-invert
+//$dropdown-item-active-background-color	$link
+//$dropdown-divider-background-color	$border
+
+
+///*
+//  // 4. Setup your Custom Colors*/
+//$linkedin: #0077B5;
+//$linkedin-invert: findColorInvert($linkedin);
+//$twitter: #1DA1F2;
+//$twitter-invert: findColorInvert($twitter);
+//$github: #222222;
+//$github-invert: findColorInvert($github);
+//
+///*  // 5. Add new color variables to the color map.*/
+//@import "../../../../node_modules/bulma/sass/utilities/derived-variables.sass";
+//$addColors: (
+//        "twitter":($twitter, $twitter-invert),
+//        "linkedin": ($linkedin, $linkedin-invert),
+//        "github": ($github, $github-invert)
+//);
+//$colors: map-merge($colors, $addColors);
+

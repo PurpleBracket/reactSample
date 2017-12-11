@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Register should match snapshot 1`] = `
+<div>
+  <div
+    className="columns"
+  >
+    <div
+      className="column"
+    />
+    <div
+      className="column is-one-third"
+      style={
+        Object {
+          "minHeight": "100vh",
+        }
+      }
+    >
+      <Panel
+        className="signinForm"
+        noBorder={true}
+        noShadow={true}
+        transparentBG={true}
+      >
+        <Subhead
+          size="4"
+        >
+          Sign In
+        </Subhead>
+        <form
+          className="card-content"
+          onSubmit={[Function]}
+        >
+          <Input
+            hasIconLeft={true}
+            hasIconRight={true}
+            icon="envelope"
+            name="email"
+            onChange={[Function]}
+            placeholder="Email Address"
+            required={true}
+            type="email"
+          />
+          <Input
+            hasIconLeft={true}
+            hasIconRight={true}
+            icon="unlock-alt"
+            name="password"
+            onChange={[Function]}
+            placeholder="Password"
+            required={true}
+            type="password"
+          />
+          <div
+            className="field buttons is-centered"
+          >
+            <Button
+              color="white"
+              style=""
+              type="submit"
+            >
+              Sign In
+            </Button>
+          </div>
+        </form>
+        <footer
+          className="card-footer"
+        >
+          <p
+            className="card-footer-item"
+          >
+            <span>
+              <LinkAtom
+                href="/signup"
+              >
+                Don't have an account? 
+                <br />
+                 
+                <b>
+                  Create an account
+                </b>
+              </LinkAtom>
+            </span>
+          </p>
+          <p
+            className="card-footer-item"
+          >
+            <span>
+              <LinkAtom
+                href="/password-reset"
+              >
+                Forgot Password?
+              </LinkAtom>
+            </span>
+          </p>
+        </footer>
+      </Panel>
+    </div>
+    <div
+      className="column"
+    />
+  </div>
+</div>
+`;

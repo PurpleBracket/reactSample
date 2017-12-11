@@ -1,0 +1,59 @@
+{
+  "favicon": {
+    "enabled": false,
+    "priority": 10,
+    "module": "serve-favicon"
+  },
+  "static": {
+    "enabled": true,
+    "priority": 20,
+    "module": {
+      "name": "serve-static",
+      "arguments": [
+        "public"
+      ]
+    }
+  },
+  "responseTime": {
+    "enabled": true,
+    "priority": 30,
+    "module": {
+      "name": "response-time"
+    }
+  },
+  "ping": {
+    "enabled": false,
+    "priority": 40,
+    "module": {
+      "name": "express-ping",
+      "method": "ping"
+    }
+  },
+  "session": {
+    "enabled": true,
+    "module": "express-session"
+  },
+  "lusca": {
+    "parallel": {
+      "csrf": {
+        "enabled": true,
+        "module": {
+          "name": "lusca",
+          "method": "csrf"
+        }
+      }
+    }
+  },
+  "enrouten": {
+    "enabled": true,
+    "priority": 50,
+    "module": {
+      "name": "express-enrouten",
+      "arguments": [
+        {
+          "directory": "../../dist/controllers"
+        }
+      ]
+    }
+  }
+} lkm

@@ -1,0 +1,7 @@
+@import "../styles/styles";
+
+.landingWrapper{
+  background: $dark-purple;
+  //background-image: linear-gradient(135deg, $dark-purple, darken($light-grey-blue, 20%));
+  min-height: 100vh;
+}

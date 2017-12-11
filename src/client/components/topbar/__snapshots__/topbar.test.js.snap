@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header should render for app page 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-fixed-top is-dark topbarApp"
+  role="navigation"
+>
+  <div
+    className="navbar-start"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <button
+        className="button navbar-burger"
+        onBlur={[Function]}
+        onClick={[Function]}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+    </div>
+  </div>
+  <div
+    className="navbar-end"
+  >
+    <UserDropdown
+      dark={true}
+      transparentBG={true}
+    />
+  </div>
+</nav>
+`;
+
+exports[`Header should render for landing page 1`] = `
+<nav
+  aria-label="main navigation"
+  className="navbar is-dark topbarHome is-fixed-top is-transparent"
+  role="navigation"
+>
+  <div
+    className="navbar-start"
+  >
+    <div
+      className="navbar-brand"
+    >
+      <NavLogo
+        href="/"
+        logoFull={true}
+      />
+      <button
+        className="button navbar-burger"
+        onClick={[Function]}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+    </div>
+  </div>
+  <div
+    className="navbar-end"
+  >
+    <div
+      className="navbar-menu"
+    >
+      <NavLink
+        button={true}
+        className="is-primary is-inverted is-outlined"
+        href="/signup"
+        transparentBG={true}
+      >
+        Create Account
+      </NavLink>
+      <NavLink
+        button={true}
+        className="is-primary is-inverted is-outlined"
+        href="/signin"
+        transparentBG={true}
+      >
+        Sign In
+      </NavLink>
+    </div>
+  </div>
+</nav>
+`;

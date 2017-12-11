@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LogoIcon should match snapshot 1`] = `
+<img
+  alt="Treasure"
+  src={Object {}}
+/>
+`;

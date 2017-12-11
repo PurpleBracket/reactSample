@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Subhead should match snapshot 1`] = `
+<h1
+  className="subtitle subhead is-1 "
+  style={Object {}}
+>
+  Test Subhead
+</h1>
+`;

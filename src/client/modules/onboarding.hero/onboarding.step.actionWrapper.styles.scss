@@ -1,0 +1,15 @@
+@import "../../styles/styles";
+
+.action-wrapper, .actionWrapper {
+  margin: 20px 0 0;
+  transition: $transition-speed--1, opacity 0.2s ease-in-out;
+  //overflow: hidden;
+
+  &.passive{
+    height: 0;
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    opacity: 0;
+  }
+}

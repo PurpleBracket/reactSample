@@ -1,0 +1,48 @@
+@import "../../styles/styles";
+
+.card.panel, .panel {
+  background: $grey-bg;
+  transition: $transition-speed--1;
+
+  @include breakpoint(tabletSm, 'max') {
+    padding: 20px;
+    margin: 0 0 20px;
+  }
+
+  &.is-transparent--bg{
+    background: transparent !important;
+  }
+
+  &.is-padded{
+    padding: 50px;
+
+    @include breakpoint(tabletSm, 'max') {
+      padding: 25px;
+    }
+  }
+
+  &.is-noShadow{
+    box-shadow: none;
+  }
+
+  &.is-noBorder{
+    border: 0 solid transparent;
+  }
+
+  &.is-padded--sm{
+    padding: 30px;
+  }
+
+  &.is-passive{
+    opacity: 0.35;
+    pointer-events: none;
+
+    button{
+      pointer-events: none;
+    }
+  }
+
+  &.column {
+    margin-bottom: 0 !important;
+  }
+}

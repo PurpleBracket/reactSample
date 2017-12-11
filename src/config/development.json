@@ -1,0 +1,21 @@
+{
+  "secret": "DEVELOPMENT",
+
+  "treasure-api": {
+    "port": 5000,
+    "host": "devbox.treasure.tech",
+    "url": "devbox.treasure.tech:5000"
+  },
+
+  "mongo": {
+    "server": "ds031835.mlab.com:31835",
+    "port": "31835",
+    "database": "treasure-local",
+    "uri": "mongodb://development:development@ds031835.mlab.com:31835/treasure-development"
+  },
+
+  "plaid": {
+    "env": "development",
+    "url": "https://development.plaid.com"
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../styles/styles";
+
+nav.navbar.topbarApp {
+  background-color: $grey-bg !important;
+  height: 50px;
+  line-height: 50px;
+  color: $dark-purple;
+  box-shadow: $button-shadow;
+
+  .navbar-menu{
+    transition: $transition-speed--1;
+    z-index: 1005;
+    @include breakpoint(tabletLg, 'max') {
+      background-color: $grey-darker;
+    }
+
+    @include breakpoint(tabletLg) {
+      display: none;
+    }
+  }
+
+  .navbar-burger{
+    background-color: transparent !important;
+    color: $grey-darker !important;
+    border: 0px solid transparent;
+  }
+}

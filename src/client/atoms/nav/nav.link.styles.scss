@@ -1,0 +1,62 @@
+@import "../../styles/styles";
+
+.nav-link.navbar-item, a.navbar-item{
+  color: $grey-bg;
+  background-color: transparent;
+  padding: 0.5rem 0.15rem;
+
+  &:hover {
+    background-color: transparent;
+    color: $grey-bg;
+  }
+}
+
+.nav-link.navbar-item.nav-link-dark, .navLinkDark{
+    a.navbar-item {
+        background-color: $grey-darker;
+        color: rgba(255, 255, 255, 0.8);
+        transition: $transition-speed--1;
+
+        &:hover{
+            color: $grey-darker;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+    }
+}
+//
+//.nav-linkLight {
+//    a.navbar-item{
+//        background-color: $grey-bg;
+//        color: rgba($grey-darker, 0.8);
+//        transition: $transition-speed--1;
+//
+//        &:hover{
+//            background-color: $grey-bg;
+//            color: rgba($grey-darker, 1);
+//        }
+//    }
+//}
+//
+.nav-link.nav-link-transparent, .navLinkTransparent {
+    a.navbar-item{
+        background-color: transparent !important;
+        color: rgba($grey-bg, 0.75);
+        transition: $transition-speed--1;
+
+        &:hover{
+            color: rgba(#ffffff, 1);
+        }
+    }
+}
+
+.nav-link.nav-link-dark-transparent, .navLinkDarkTransparent {
+  a.navbar-item{
+    background-color: transparent !important;
+    color: rgba($grey-darker, 0.75);
+    transition: $transition-speed--1;
+
+    &:hover{
+      color: rgba($grey-darker, 1);
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "secret": "STAGING",
+
+  "treasure-api": {
+    "port": 4600,
+    "host": "staging.treasure.tech",
+    "url": "staging.treasure.tech:4600"
+  }
+}
